@@ -7,7 +7,7 @@ import { Button } from "../Button";
 import { GitHubIcon } from "../Icons";
 import { useRouter } from "next/navigation";
 
-export const AuthButtons = ({ session }: { session: Session | null}) => {
+export const AuthButtons = ({ session }: { session: Session | null }) => {
   const supabase = createClientComponentClient();
   const router = useRouter();
 
@@ -22,7 +22,7 @@ export const AuthButtons = ({ session }: { session: Session | null}) => {
 
   const handleSignOut = async () => {
     await supabase.auth.signOut();
-    router.refresh()
+    router.refresh();
   };
 
   return (
